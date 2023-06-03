@@ -36,9 +36,9 @@ describe("Teacher Endpoints", () => {
   it("POST /addTeacher should show a newly added teacher", async () => {
     // add new teacher
     await requestWithSupertest.post("/addTeacher").send({
-      "id": 40139,
-      "name": "Nilanthi2 Fernando",
-      "age": 43
+      "id": 10033,
+      "name": "Nilanthi Fernando",
+      "age": 42
     });
 
     const res = await requestWithSupertest.get("/listTeachers");
@@ -48,14 +48,14 @@ describe("Teacher Endpoints", () => {
     expect(body.length).toBe(4)
 
     expect(body).toContainEqual({
-      "id": 40139,
-      "name": "Nilanthi2 Fernando",
-      "age": 43
+      "id": 10033,
+      "name": "Nilanthi Fernando",
+      "age": 42
     });
   });
 
   it("POST /editTeacher should show a newly added teacher", async () => {
-    // add new teacher
+    // edit teacher
     await requestWithSupertest.post("/editTeacher").send({
       "id": 10002,
       "name": "Saman",
@@ -79,7 +79,7 @@ describe("Teacher Endpoints", () => {
 
   it("POST /deleteTeacher should delete a teacher", async () => {
 
-    // delete Student
+    // delete teacher
     await requestWithSupertest.post("/deleteTeacher").send({
       "id": 10003
     });
@@ -131,8 +131,8 @@ describe("Student Endpoints", () => {
   it("POST /addStudent should show a newly added student", async () => {
     // add new student
     await requestWithSupertest.post("/addStudent").send({
-      "id": 79986,
-      "name": "Rashinii Shehara",
+      "id": 99999,
+      "name": "Rashini Shehara",
       "age": 12,
       "hometown": "Galle"
     });
@@ -144,7 +144,7 @@ describe("Student Endpoints", () => {
     expect(body.length).toBe(4)
 
     expect(body).toContainEqual({
-      "id": 79986,
+      "id": 99999,
       "name": "Rashini Shehara",
       "age": 12,
       "hometown": "Galle"
@@ -152,7 +152,7 @@ describe("Student Endpoints", () => {
   });
 
   it("POST /editStudent should edit a Student", async () => {
-    // add new teacher
+    // edit student
     await requestWithSupertest.post("/editStudent").send({
       "id": 20002,
       "name": "Sandakan",
