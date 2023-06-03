@@ -36,9 +36,9 @@ describe("Teacher Endpoints", () => {
   it("POST /addTeacher should show a newly added teacher", async () => {
     // add new teacher
     await requestWithSupertest.post("/addTeacher").send({
-      "id": 10038,
-      "name": "Nilanthi Fernando",
-      "age": 42
+      "id": 20139,
+      "name": "Nilanthi2 Fernando",
+      "age": 43
     });
 
     const res = await requestWithSupertest.get("/listTeachers");
@@ -48,9 +48,9 @@ describe("Teacher Endpoints", () => {
     expect(body.length).toBe(4)
 
     expect(body).toContainEqual({
-      "id": 10038,
-      "name": "Nilanthi Fernando",
-      "age": 42
+      "id": 20139,
+      "name": "Nilanthi2 Fernando",
+      "age": 43
     });
   });
 
@@ -131,8 +131,8 @@ describe("Student Endpoints", () => {
   it("POST /addStudent should show a newly added student", async () => {
     // add new student
     await requestWithSupertest.post("/addStudent").send({
-      "id": 99998,
-      "name": "Rashini Shehara",
+      "id": 99986,
+      "name": "Rashinii Shehara",
       "age": 12,
       "hometown": "Galle"
     });
@@ -144,7 +144,7 @@ describe("Student Endpoints", () => {
     expect(body.length).toBe(4)
 
     expect(body).toContainEqual({
-      "id": 99998,
+      "id": 99986,
       "name": "Rashini Shehara",
       "age": 12,
       "hometown": "Galle"
