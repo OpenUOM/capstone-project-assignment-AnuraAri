@@ -36,7 +36,7 @@ describe("Teacher Endpoints", () => {
   it("POST /addTeacher should show a newly added teacher", async () => {
     // add new teacher
     await requestWithSupertest.post("/addTeacher").send({
-      "id": 20139,
+      "id": 40139,
       "name": "Nilanthi2 Fernando",
       "age": 43
     });
@@ -48,7 +48,7 @@ describe("Teacher Endpoints", () => {
     expect(body.length).toBe(4)
 
     expect(body).toContainEqual({
-      "id": 20139,
+      "id": 40139,
       "name": "Nilanthi2 Fernando",
       "age": 43
     });
