@@ -131,7 +131,7 @@ describe("Student Endpoints", () => {
   it("POST /addStudent should show a newly added student", async () => {
     // add new student
     await requestWithSupertest.post("/addStudent").send({
-      "id": 99986,
+      "id": 79986,
       "name": "Rashinii Shehara",
       "age": 12,
       "hometown": "Galle"
@@ -144,7 +144,7 @@ describe("Student Endpoints", () => {
     expect(body.length).toBe(4)
 
     expect(body).toContainEqual({
-      "id": 99986,
+      "id": 79986,
       "name": "Rashini Shehara",
       "age": 12,
       "hometown": "Galle"
